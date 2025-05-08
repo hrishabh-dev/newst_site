@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 98%; /* Off-white, was 220 20% 96% (Light gray-blue) */
+    --foreground: 210 10% 23%; /* Dark gray - unchanged */
+
+    --card: 0 0% 100%; /* White for cards, was 220 20% 99% */
+    --card-foreground: 210 10% 23%; /* Dark gray - unchanged */
+
+    --popover: 0 0% 100%; /* White for popovers, was 220 20% 99% */
+    --popover-foreground: 210 10% 23%; /* Dark gray - unchanged */
+
+    --primary: 207 66% 52%; /* Blue #3498db - unchanged */
+    --primary-foreground: 0 0% 98%; /* White text on blue buttons - unchanged */
+
+    --secondary: 210 30% 94%; /* Lighter gray for secondary elements, adjusted from 90% */
+    --secondary-foreground: 210 10% 23%; /* Dark gray - unchanged */
+
+    --muted: 210 30% 94%;  /* Adjusted from 90% */
+    --muted-foreground: 210 10% 45%; /* Lighter gray for less important text - unchanged */
+
+    --accent: 207 66% 52%; /* Blue #3498db for links, active states - unchanged */
+    --accent-foreground: 0 0% 98%; /* White text on blue accents - unchanged */
+
+    --destructive: 0 74.2% 50.2%; /* Adjusted destructive for better harmony - unchanged */
+    --destructive-foreground: 0 0% 98%; /* Unchanged */
+
+    --border: 210 10% 88%; /* Lighter border - unchanged */
+    --input: 0 0% 100%; /* White for input background, was 210 20% 98% */
+    --ring: 207 66% 52%; /* Blue for focus rings - unchanged */
+
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+
+    /* Sidebar variables remain, though not used in this app directly */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 210 10% 15%; /* Dark blue-gray - unchanged */
+    --foreground: 0 0% 90%; /* Off-white - unchanged */
+
+    --card: 210 10% 12%; /* Slightly darker than background for cards in dark mode */
+    --card-foreground: 0 0% 90%; /* Off-white - unchanged */
+
+    --popover: 210 10% 12%; /* Popover matches card bg in dark mode */
+    --popover-foreground: 0 0% 90%; /* Off-white - unchanged */
+
+    --primary: 207 66% 58%; /* Brighter Blue for buttons in dark mode - unchanged */
+    --primary-foreground: 210 20% 5%; /* Unchanged */
+
+    --secondary: 210 10% 25%; /* Unchanged */
+    --secondary-foreground: 0 0% 90%; /* Unchanged */
+
+    --muted: 210 10% 25%; /* Unchanged */
+    --muted-foreground: 0 0% 60%; /* Unchanged */
+
+    --accent: 207 66% 58%; /* Brighter Blue for accents in dark mode - unchanged */
+    --accent-foreground: 210 20% 5%; /* Unchanged */
+
+    --destructive: 0 62.8% 45.6%; /* Adjusted destructive for dark mode - unchanged */
+    --destructive-foreground: 0 0% 98%; /* Unchanged */
+
+    --border: 210 10% 30%; /* Unchanged */
+    --input: 210 10% 18%; /* Slightly darker input for dark mode */
+    --ring: 207 66% 58%; /* Unchanged */
+
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    
+    /* Sidebar dark variables remain */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
