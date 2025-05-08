@@ -11,9 +11,13 @@ export interface NewsArticle {
 }
 
 // IMPORTANT: Storing API keys directly in code is not secure for production applications.
-// It's better to use environment variables (e.g., process.env.SERPAPI_API_KEY).
-// This key is provided as per user request for this specific update.
-const SERPAPI_API_KEY = 'd2961169abd3c9d30d3b10a8c72ae6ae1ec2da5cac2e6ccbe310032a232e1d8b';
+// It's better to use environment variables (e.g., process.env.SERPAPI_API_KEY). This key is provided as per user request for this specific update.
+const SERPAPI_API_KEY = process.env.SERPAPI_API_KEY;
+
+if (!SERPAPI_API_KEY) {
+  throw new Error("Missing SerpAPI API key. Please set the SERPAPI_API_KEY environment variable.");
+}
+
 const SERPAPI_BASE_URL = 'https://serpapi.com/search.json';
 
 interface SerpApiNewsResultSource {
